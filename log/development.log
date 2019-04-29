@@ -40,3 +40,148 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title Goes Here"], ["description", "Desc goes here..."], ["created_at", "2019-04-29 18:53:46.155902"], ["updated_at", "2019-04-29 18:53:46.155902"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-04-29 14:07:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 37ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-04-29 14:07:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/flatironstudentaccount/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/flatironstudentaccount/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/flatironstudentaccount/.rvm/rubies/ruby-2.3.7/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.3ms)
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (138.2ms)
+Started GET "/posts/new" for ::1 at 2019-04-29 14:16:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 522ms (Views: 500.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for ::1 at 2019-04-29 14:18:00 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpmtAo/8ggGgldOFbt/YNgxRFqWsiJukah1RsE0SEnmjClGSpPGkFZFTx81bn6LKtMLRqg55UqK0YqT8EAxk+A==", "title"=>"Help", "description"=>"HELP!", "commit"=>"Submit Post"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `prarms' for #<PostsController:0x00007fa324893ba8>
+Did you mean?  params):
+  
+app/controllers/posts_controller.rb:17:in `create'
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.3ms)
+Started POST "/posts" for ::1 at 2019-04-29 14:18:30 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpmtAo/8ggGgldOFbt/YNgxRFqWsiJukah1RsE0SEnmjClGSpPGkFZFTx81bn6LKtMLRqg55UqK0YqT8EAxk+A==", "title"=>"Help", "description"=>"HELP!", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Help"], ["description", "HELP!"], ["created_at", "2019-04-29 19:18:30.270981"], ["updated_at", "2019-04-29 19:18:30.270981"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 153ms (ActiveRecord: 4.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-04-29 14:18:37 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpmtAo/8ggGgldOFbt/YNgxRFqWsiJukah1RsE0SEnmjClGSpPGkFZFTx81bn6LKtMLRqg55UqK0YqT8EAxk+A==", "title"=>"Help", "description"=>"HELP!", "commit"=>"Submit Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Help"], ["description", "HELP!"], ["created_at", "2019-04-29 19:18:37.476407"], ["updated_at", "2019-04-29 19:18:37.476407"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 133ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-29 14:20:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironstudentaccount/.rvm/gems/ruby-2.3.7/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (6.3ms)
+Completed 200 OK in 35ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-04-29 14:20:35 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 350ms (Views: 331.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/posts" for ::1 at 2019-04-29 14:20:47 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ybqsr7sm8szdIAjvhOP2bqWt6cbkune5bncm4DlvSjV4KVA/kCvU2OzmHKexo4ySHT4uyUZLvr+wCNOsZHE8tA==", "title"=>"Help", "description"=>"HELP!", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Help"], ["description", "HELP!"], ["created_at", "2019-04-29 19:20:47.483418"], ["updated_at", "2019-04-29 19:20:47.483418"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 123ms (ActiveRecord: 1.8ms)
+
+
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/posts/new" for ::1 at 2019-04-29 14:33:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 329ms (Views: 304.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/posts" for ::1 at 2019-04-29 14:35:38 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"COOYFsCh5RKWd7GL7HeWjAvNqe4UuhQmS88Ad5Wy8A65cGSG66zDBqexpcPZN+xws15u4bZL3SCVsPU7yKyGjw==", "title"=>"Something", "description"=>"Something else", "commit"=>"Submit Post"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Something"], ["description", "Something else"], ["created_at", "2019-04-29 19:35:38.580804"], ["updated_at", "2019-04-29 19:35:38.580804"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/6" for ::1 at 2019-04-29 14:35:38 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 74ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
